@@ -1,0 +1,916 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Satisfy&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Satisfy&family=Whisper&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.15;
+  color: #111;
+}
+
+.wrapper {
+  min-width: 320px;
+  background-color: #FFFFFF;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.Frame1 {
+  width: 100%;
+}
+
+.Frame1 .menubar {
+  width: 100%;
+  height: 50px;
+  background-color: #F0BB1A;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.Frame1 .menubar ul li {
+  position: relative;
+}
+
+.Frame1 .menubar ul li::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  height: 4px;
+  width: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: aqua;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.Frame1 .menubar ul li:hover::after {
+  width: 100%;
+}
+
+.Frame1 .menubar .title {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.Frame1 .menubar .title a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.Frame1 .menubar .title li a:hover {
+  color: #000;
+  transition: 0.5s;
+}
+
+.Frame1 .menubar .title .service {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  list-style: none;
+  font-size: 14px;
+  display: none;
+  text-decoration: none;
+  width: 100px;
+  background-color: blue;
+  text-align: center;
+  color: #FFf;
+  padding: 10px 0px;
+}
+
+.service:hover .submenu {
+  display: block;
+}
+
+.logo {
+  width: 135px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.logo:hover {
+  scale: 2;
+}
+
+.thumb_item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.background .slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0 20px;
+  margin-bottom: -20px;
+  list-style: none;
+}
+
+.background .slick-dots button {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  background-color: #00F;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+.background .slick-dots .slick-active button {
+  background-color: yellow;
+}
+
+.Frame2 {
+  width: 100%;
+  height: 380px;
+  background: url(./image/bg_dk.png);
+  background-size: cover;
+  background-color: #e08c8c;
+  position: relative;
+}
+
+.Frame2 .content .introduce {
+  text-align: center;
+  font-size: 60px;
+  color: #111;
+  font-weight: 900px;
+  padding-top: 20px;
+}
+
+.Frame2 .content .introduce .title {
+  font-size: 60px;
+  font-family: "Satisfy", cursive;
+  color: #F0BB1A;
+  text-transform: capitalize;
+
+}
+
+.Frame2 .content .introduce-1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.xemthem_gt {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  line-height: 50px;
+  width: 150px;
+  font-weight: normal;
+  border: 2px solid #2f1af0;
+  border-radius: 25px;
+  text-align: center;
+  position: absolute;
+  top: 250px;
+  transform: translateY(-45%);
+  left: 45%;
+}
+
+.xemthem_gt:hover {
+  color: #fff;
+  transition: 0.5s;
+  background: #F0BB1A;
+}
+
+.Frame3 {
+  width: 100%;
+  height: auto;
+  background-image: url("./image/bg_dv.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.Frame3 .service .service-title {
+  text-align: center;
+  font-family: "Satisfy", cursive;
+  font-size: 60px;
+  color: #F0BB1A;
+  font-weight: 900px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.product-thumb {
+  height: 300px;
+  margin-bottom: 20px;
+  margin: 0 10px;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.Frame3 .product ul.product-item li:hover .product-thumb img {
+  filter: opacity(60%);
+}
+
+.Frame3 .product ul.product-item .product-info a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: #FFf;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.product-item .slick-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: #2cccff;
+  color: white;
+  border: none;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+.product-item .slick-prev:hover {
+  background-color: orange;
+  color: #111;
+}
+
+.product-item .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: #2cccff;
+  color: white;
+  border: none;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+.product-item .slick-next:hover {
+  background-color: orange;
+  color: #111;
+}
+
+.product-item .slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0 20px;
+  margin-bottom: -20px;
+  list-style: none;
+}
+
+.product-item .slick-dots button {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  background-color: #00F;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+.product-item .slick-dots .slick-active button {
+  background-color: #F00;
+}
+
+/* bảng giá */
+.tieude_giua {
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin: 20px 0;
+  display: inline-block;
+  width: 100%;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+.box_news a {
+  text-decoration: none;
+  color: #272727;
+  font-size: 24px;
+  transition: 0.4s;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.box_news a:hover {
+  color: #F00;
+  transition: 0.4s;
+}
+
+.box_news a img {
+  float: left;
+  width: 50%;
+  max-width: 290px !important;
+  transition: 1s;
+  margin-right: 15px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.box_news a img:hover {
+  opacity: 0.4;
+  transition: 1s;
+}
+
+.box_news .xemthem {
+  float: left;
+  line-height: 40px;
+  display: inline-block;
+  border: 1px solid #F0BB1A;
+  min-width: 145px;
+  text-align: center;
+  border-radius: 25px;
+  color: #252424;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+.box_news .xemthem:hover {
+  color: #fff;
+  background: #F0BB1A;
+  transition: 0.5s;
+}
+
+
+/* bảng giá dịch vụ */
+.content_bg {
+  width: 100%;
+  text-align: center;
+}
+
+/* đào tạo */
+.item {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.imagedt {
+  overflow: hidden;
+  position: relative;
+}
+
+.imagedt:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.imagedt:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.imagedt:hover:before {
+  right: 50%;
+  left: 50%;
+  width: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.imagedt:hover:after {
+  height: 0;
+  top: 50%;
+  bottom: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.item .namedt a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+.item .namedt a:hover {
+  transition: 0.4s;
+  color: red;
+}
+
+/* chương trình đào tạo */
+.content_dt {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* khuyến mãi */
+
+.Framekm {
+  text-align: center;
+}
+
+.Framekm .box_news p {
+  font-size: 20px;
+}
+
+
+/* style cho frame4 đăng ký nhận tin */
+.Frame4 .lienhe_form {
+  width: 100%;
+  text-align: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  background: url(./image/bg_dk.png);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-size: cover;
+  background-color: #111;
+  margin-top: 50px;
+}
+
+.Frame4 .lienhe_form .td_1 {
+  font-size: 60px;
+  font-family: "Satisfy", cursive;
+  color: #F0BB1A;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+
+/* phần nhập thông tin dưới đăng ký nhận tin */
+.b-trong {
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+/* nhập thông tin của bạn để nhận thông tin mới nhất của chúng tôi */
+.b-trong p {
+  margin-bottom: 17px;
+  text-align: left;
+  font-size: 24px;
+}
+
+/* định dạng margin trên dưới của các ô nhập liệu */
+.b-trong .frm .item_lienhe {
+  margin: 7px 0;
+}
+
+/* định dạng cho ô họ và tên */
+.b-trong .frm .item_lienhe:nth-child(1) {
+  width: 100%;
+  float: left;
+}
+
+/* định dạng cho ô điện thoại trong đăng ký nhận tin */
+.b-trong .frm .item_lienhe:nth-child(2) {
+  width: 100%;
+  float: left;
+}
+
+/* đinh dạng cho ô địa chỉ  */
+.b-trong .frm .item_lienhe:nth-child(3) {
+  width: 100%;
+  float: left;
+}
+
+/* định dạng cho ô nội dung */
+.b-trong .frm .item_lienhe:nth-child(4) {
+  width: 100%;
+  float: left;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  position: relative;
+  align-items: center;
+}
+
+
+/* định dạng nền kích thước các ô họ và tên, điện thoại, địa chỉ */
+.b-trong .frm .item_lienhe input[type='text'] {
+  line-height: 58px;
+  font-size: 18px;
+  padding: 0 10px;
+  color: rgb(255 255 255 / 0.7);
+  border: 1px solid rgb(255 255 255 / 0.2);
+  background: none;
+  width: 100%;
+}
+
+/* định dạng cỡ chữ, màu săc các text họ và tên, điện thoại, địa chỉ, nội dung trong các ô */
+.b-trong .frm .item_lienhe input[type='text']::placeholder,
+.b-trong .frm .item_lienhe textarea::placeholder {
+  color: rgb(255 255 255 / 0.7);
+  font-size: 20px;
+}
+
+/* định dạng cả kích thước chiều cao ô nhập nội dung, kích thước cỡ chữ để nhập vào, màu nền  */
+.b-trong .frm .item_lienhe textarea {
+  font-size: 14px;
+  padding: 10px;
+  color: rgb(255 255 255 / 0.7);
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+/* định dạng cho 2 ô nhập lại và gửi */
+.item_nt1 {
+  text-align: right;
+}
+
+/* định dạng 2 button nhập lại và gửi */
+div.b-trong div.frm .item_lienhe input[type='button'],
+div.b-trong div.frm .item_lienhe button {
+  padding: 2px 15px;
+  font-weight: normal;
+  color: #fff;
+  background: orangered;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 33px;
+  border: 1px solid;
+  min-width: 100px;
+  padding-top: 6px;
+}
+
+div.b-trong div.frm .item_lienhe input[type='button']:hover,
+div.b-trong div.frm .item_lienhe button:hover {
+  color: #fff;
+  background: none;
+  border: 2px solid #fff;
+}
+
+/* mục liên hệ */
+/* canh padding trên dưới cho cả khung bên trái và phải dưới chữ liên hệ */
+.box_container .content {
+  padding: 10px 0px;
+}
+
+.titlelh {
+  width: 45%;
+  float: left;
+  margin-left: 50px;
+}
+
+.titlelh .title_1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.titlelh .title_2 {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* kích thước chiều rộng cho các ô nhập dữ liệu vào bên phải */
+.form_right {
+  width: 45%;
+  float: right;
+  margin-right: 70px;
+}
+
+/*Form nhập họ và tên, địa chỉ... bên phải*/
+.frm_lienhe {
+  margin: -10px 0;
+  font-size: 13px;
+  position: relative;
+}
+
+/* canh khoảng cách trên dưới của mỗi ô nhập liệu */
+.frm_lienhe .item_lienhe {
+  margin: 8px 0px;
+}
+
+/* chỉnh kích thước chiều rộng từng ô nhập liệu, cỡ chữ... */
+.frm_lienhe .item_lienhe input[type='text'],
+.frm_lienhe .item_lienhe textarea,
+.frm_lienhe .item_lienhe select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-size: 20px;
+  padding-right: 60px;
+}
+
+/* style cho các logo phần này thuộc mục liên hệ  */
+.form_right .frm_lienhe .item_lienhe input[type='text'],
+.form_right .frm_lienhe .item_lienhe textarea,
+.form_right .frm_lienhe .item_lienhe select {
+  background: none
+}
+
+.form_right .frm_lienhe .item_lienhe:nth-child(1) {
+  background: #fff url(./image/lh1.png) no-repeat 95% center;
+}
+
+.form_right .frm_lienhe .item_lienhe:nth-child(2) {
+  background: #fff url(./image/lh2.png) no-repeat 95% center;
+}
+
+.form_right .frm_lienhe .item_lienhe:nth-child(3) {
+  background: #fff url(./image/lh3.png) no-repeat 95% center;
+}
+
+.form_right .frm_lienhe .item_lienhe:nth-child(4) {
+  background: #fff url(./image/lh4.png) no-repeat 95% center;
+}
+
+/* no repeat: 95% là điều chỉnh vị trí logo theo chiều ngang còn 6px là điều chỉnh vị trí logo theo chiều dọc */
+.form_right .frm_lienhe .item_lienhe:nth-child(5) {
+  background: #fff url(./image/lh5.png) no-repeat 95% 6px;
+}
+
+/* style cho 2 nút nhấn gửi, nhập lại */
+.frm_lienhe .item_lienhe input[type='button'],
+.frm_lienhe .item_lienhe input[type='reset'],
+.frm_lienhe .item_lienhe input[type='submit'] {
+  padding: 10px 25px;
+  background: orange;
+  border: 1px solid orange;
+  color: #fff;
+  margin: 10px 0px;
+  font-size: 13px;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  transition: 0.8s;
+}
+
+/* hover cho 2 nút gửi và nhập lại */
+.frm_lienhe .item_lienhe input[type='button']:hover,
+.frm_lienhe .item_lienhe input[type='reset']:hover,
+.frm_lienhe .item_lienhe input[type='submit']:hover {
+  background: none;
+}
+
+/* style cho phần bản đồ phía dưới 2 chữ gửi và nhập lại */
+.bando_1 iframe {
+  width: 100% !important;
+  border: 1px solid #ddd !important;
+}
+
+/* hết phần mục liên hệ */
+
+.Frame5 {
+  width: 100%;
+  height: auto;
+  background-image: url("./image/bg_ft.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+  color: white;
+  padding: 40px 0 0 30px;
+  font-family: "EB Garamond", serif;
+}
+
+
+.wap_footer {
+  max-width: 100%;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 2px solid rgb(255 255 255 / 0.4);
+}
+
+.left_footer {
+  width: 60%;
+  float: left;
+}
+
+.title_ft {
+  font-size: 40px;
+}
+
+.left_footer .name {
+  font-size: 70px;
+  margin-top: 10px;
+  color: #F0BB1A;
+}
+
+.left_footer ul {
+  list-style: none;
+  margin-top: 17px;
+  margin-left: -17px;
+}
+
+.left_footer ul li {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.left_footer ul li .content_ft {
+  width: calc(100% - 90px);
+  border-bottom: 1px dashed #656565;
+  padding-bottom: 17px;
+  float: right;
+  margin-bottom: 17px;
+}
+
+.left_footer ul li .content_ft1 {
+  border-bottom: none;
+  color: white;
+}
+
+.left_footer ul li i {
+  font-size: 17px;
+  width: 90px;
+  text-align: center;
+  float: left;
+  padding-top: 8px;
+}
+
+.right_footer {
+  width: 40%;
+  float: right;
+}
+
+.right_ft ul {
+  list-style: none;
+  padding: 0px;
+  font-weight: normal;
+  margin: 20px 0;
+  padding-top: 10px;
+}
+
+.right_ft ul li {
+  position: relative;
+  clear: both;
+  padding: 3px 0;
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+.right_ft ul li::before {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: orange;
+  left: 0;
+  top: 17px
+}
+
+.right_ft ul li a {
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.right_ft ul li a:hover {
+  color: orange;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.bando-footer iframe {
+  width: 90%;
+  height: 285px;
+}
+
+/* style cho mục Frame6 */
+a.icon-chat {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 15px;
+  bottom: 160px;
+  z-index: 999;
+  text-decoration: none;
+}
+
+a.icon-chat i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1182FC;
+  position: relative;
+  z-index: 9999;
+}
+
+a.goi_dien {
+  bottom: 230px !important;
+}
+
+a.goi_dien i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.icon-chat img {
+  width: 30px;
+  height: 30px;
+}
+
+.kenit-alo-circle {
+  width: 50px;
+  height: 50px;
+  top: -5px;
+  right: -5px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid rgba(17, 130, 252, .8);
+  opacity: .5;
+  border-color: #1182FC;
+}
+
+.kenit-alo-circle-fill {
+  width: 60px;
+  height: 60px;
+  top: -10px;
+  right: -10px;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  background-color: rgba(17, 130, 252, 0.45);
+  opacity: .75;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale3d(.3, .3, .3);
+
+    50% {
+      opacity: 1;
+    }
+  }
+}
